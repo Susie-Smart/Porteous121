@@ -71,6 +71,10 @@ body{
     display: block;
     text-align: left;
   }
+    
+    .hero-text {
+        top:50%;
+    }
 }
 
 body, html {
