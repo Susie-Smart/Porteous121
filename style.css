@@ -133,7 +133,9 @@ body, html {
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .TwoColumn {
-    width: 100%;
+    width:95%;
+      margin-left: 2.5%;
+    
     padding:5px;
   }
     .second{
@@ -149,6 +151,7 @@ body, html {
   max-width: 800px;
   position: relative;
   margin: auto;
+  padding:10px;
 }
 
 /* Hide the images by default */
