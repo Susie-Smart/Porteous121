@@ -72,6 +72,13 @@ body{
     text-align: left;
   }
     
+  .hero-text h1{
+      font-size:40px;
+    }
+.hero-text p{
+      font-size:25px;
+}
+    
 }
 
 body, html {
