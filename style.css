@@ -48,14 +48,13 @@ body{
    .logo-image{
     height:40px;
     overflow: hidden;
-    margin-top: -6px;
-       margin-bottom: -6px;
 }
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
     z-index: 9999;
+    padding: 0px 0px;
   }
 }
 
