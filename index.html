@@ -160,24 +160,7 @@
         <div style="text-align: center">
             <h1 style="padding-top:20px;">Book Now</h1>
             <h3 style="font-size:30px;"> Only £20 per hour </h3>
-            <h3 style="font-size:30px;"> Email now to book a session: <a href="mailto:emma-porteous1@hotmail.com">emma-porteous1@hotmail.com</a></h3>
-            
-            
-        <div class="formContainer">
-
-            <form action="" method="post">
-            First Name: <input type="text" name="first_name"><br>
-            Last Name: <input type="text" name="last_name"><br>
-            Email: <input type="text" name="email"><br>
-            Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
-            <input type="submit" name="submit" value="Submit">
-            </form>
-
-        </div>
-
-            
-       
-
+            <h3 style="font-size:30px;"> Email now to book a session: <a href="mailto:emma-porteous1@hotmail.com?subject=Porteous 121 coaching session&body=Name: %0d%0a Preffered training time: %0d%0a level of experience: %0d%0a If applicable, normal position: %0d%0a Message: ">emma-porteous1@hotmail.com</a></h3>
             
             <p> Prices are based on single person sessions. I am happy to discuss costs for pairs or small group sessions too. </p>
             <p>The location is also flexible, I have run fitness sessions in local parks. However for ball skills sessions I reccomend we use the 3G pitches at Townhead <a href="https://www.powerleague.co.uk/5-a-side/scotland/glasgow" target="_blank">Powerleage</a> </p>
@@ -255,22 +238,3 @@
     
 </script>
     
-<?php 
-if(isset($_POST['submit'])){
-    $to = "susie.m.smart@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
