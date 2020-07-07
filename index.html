@@ -162,6 +162,53 @@
             <h3 style="font-size:30px;"> Only £20 per hour </h3>
             <h3 style="font-size:30px;"> Email now to book a session: <a href="mailto:emma-porteous1@hotmail.com">emma-porteous1@hotmail.com</a></h3>
             
+            
+        <div class="formContainer">
+            
+            <?php 
+                if ($_POST["email"]<>'') { 
+                    $ToEmail = 'susie.m.smart@gmail.com'; 
+                    $EmailSubject = 'Site contact form'; 
+                    $mailheader = "From: ".$_POST["email"]."\r\n"; 
+                    $mailheader .= "Reply-To: ".$_POST["email"]."\r\n"; 
+                    $mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                    $MESSAGE_BODY = "Name: ".$_POST["name"].""; 
+                    $MESSAGE_BODY .= "Email: ".$_POST["email"].""; 
+                    $MESSAGE_BODY .= "Comment: ".nl2br($_POST["comment"]).""; 
+                    mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure"); 
+                ?> 
+                Your message was sent
+                <?php 
+                } 
+            else { 
+            <form action="/action_page.php">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name..">
+
+              <label for="email">email</label>
+              <input type="text" id="email" name="email" placeholder="Your email address...">
+
+              <label for="comment">comment</label>
+              <input type="text" id="comm" name="comment" placeholder="Your message here...">
+
+              <label for="level">Ability</label>
+              <select id="ability" name="level">
+                <option value="begginer">begginer</option>
+                <option value="intermediate">intermediate</option>
+                <option value="expereinced">expereinced</option>
+              </select>
+
+              <input type="submit" value="Submit">
+            </form>
+            <?php 
+            }; 
+            ?>
+        </div>
+
+            
+       
+
+            
             <p> Prices are based on single person sessions. I am happy to discuss costs for pairs or small group sessions too. </p>
             <p>The location is also flexible, I have run fitness sessions in local parks. However for ball skills sessions I reccomend we use the 3G pitches at Townhead <a href="https://www.powerleague.co.uk/5-a-side/scotland/glasgow" target="_blank">Powerleage</a> </p>
             
